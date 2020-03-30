@@ -1,0 +1,54 @@
+#AIcontainer {
+    width: 200px;
+    height: 350px;
+    background-color: #eee;
+    font-size: 12px;
+    border: 2px solid black;
+    position: relative;
+}
+
+#AI_userInput {
+    position: absolute;
+    width: 100%;
+    height: 30px;
+    bottom: 0;
+    background-color: #d8ebea;
+    border-top: 1px solid black;
+}
+.userResponse {
+    background-color: #32a6a8;
+    color: white;
+    border-radius: 20px;
+    position: relative;
+    left: 13%;
+    border: 1px solid black;
+    max-width: 75%;
+    padding-left: 4%;
+    padding-right: 4%;
+    margin-top: 5%;
+}
+.AIResponse {
+    background-color: #aeaeae;
+    color: black;
+    border-radius: 20px;
+    border: 1px solid black;
+    max-width: 75%;
+    position: relative;
+    left: 2%;
+    padding-left: 4%;
+    padding-right: 4%;
+    margin-top: 5%;
+}
+
+.AIInputClass {
+    position: relative;
+    left: 3px;
+    top: 5px;
+}
+#AI_textbox {
+    width: 150px;
+}
+#AI_text {
+    font-size: 15px;
+    overflow: auto;
+}
