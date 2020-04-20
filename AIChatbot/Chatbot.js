@@ -1,4 +1,4 @@
-var myTextObject;
+let myTextObject;
 /*
  * myText() function
  * Answers users questions. Triggered by updateQuestion()
@@ -16,9 +16,9 @@ function myText(text) {
         let s2 = ".*.";
         let s3 = "..*";
         setTimeout(this.thinkingText, 1, this.prevText, s);
-        setTimeout(this.thinkingText, 750, this.prevText, s2);
-        setTimeout(this.thinkingText, 1250, this.prevText, s3);
-        setTimeout(this.thinkingText, 1750, this.prevText, null);
+        setTimeout(this.thinkingText, 500, this.prevText, s2);
+        setTimeout(this.thinkingText, 1000, this.prevText, s3);
+        setTimeout(this.thinkingText, 1500, this.prevText, null);
         setTimeout(this.loadAnswer, 1750, this);
     }
     this.thinkingText = function(oldText, loadingText) {
@@ -27,7 +27,25 @@ function myText(text) {
             document.getElementById("AI_text").innerHTML += "<div class='AIResponse'>" + loadingText + "</div>";
     }
     this.loadAnswer = function(obj) {
+        obj.text = obj.text.toLowerCase();
+        let answer = "";
+        if(obj.text === "Hello")
+            answer = "Hello! :)";
+        else if (/jadon/g.exec(obj.text) != null)
+            answer = "Ah yes... Jadon the sexiest man to ever exist";
+        else if (obj.text.substring(0,2) === "?p")
+            answer = showProduct(obj.text.substring(2).trim(), "findProduct");
+        else if (/couch/g.exec(obj.text) != null)
+            answer = showProduct("couch", "findCount");
+        else if (obj.text === "help" || obj.text === "h")
+            answer = "Type ?p and the name of a product you'd like more details on, or you can ask a general question! Or, you can type a general furniture to open that furniture";
+        else if(obj.text === "lamp") {
+            window.open("lampFile.html");
+            answer = "Opened! :D";
+        } else
+            answer = "Sorry, I do not understand " + obj.text;
 
+        document.getElementById("AI_text").innerHTML += "<div class='AIResponse'>" + answer + "</div>";
     }
 }
 
