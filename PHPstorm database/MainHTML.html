@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" type="text/css" href="AI_CSS.css">
+    <meta charset="UTF-8">
+    <title>AI Chatbot</title>
+</head>
+<body>
+
+
+<div id="AIcontainer">
+    <div id="chat_box" onclick="showChat()">
+        Open chatbot
+    </div>
+    <div id="chat_popup">
+        <div id="AI_text"></div>
+        <div id="AI_userInput">
+            <input type="text" id="AI_textbox" class="AIInputClass" />
+            <button class="AIInputClass" id="updateButton" onclick="updateQuestion()">Ask</button>
+        </div>
+        <div id="exit_chat" onclick="hideChat()">X</div>
+    </div>
+</div>
+<script src="JavaScript_Files/XML_Requests.js"></script>
+<script src="JavaScript_Files/Chatbot.js"></script>
+</body>
+</html>

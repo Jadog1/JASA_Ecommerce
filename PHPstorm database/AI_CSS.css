@@ -1,0 +1,101 @@
+#AIcontainer {
+    border: 2px solid black;
+    position: absolute;
+    bottom: 3px;
+    right: 3px;
+}
+
+#chat_box {
+    background-color: #eee;
+    width: 200px;
+    height: 20px;
+    text-align: center;
+    cursor: pointer;
+    z-index: 1;
+}
+
+#chat_popup {
+    width: 200px;
+    height: 350px;
+    background-color: #eee;
+    font-size: 12px;
+    z-index: 2;
+    display: none;
+}
+
+#exit_chat {
+    width: 13px;
+    height: 13px;
+    text-align: center;
+    background-color: #eee;
+    color: red;
+    cursor: pointer;
+    position: absolute;
+    top: 1px;
+    right:1px;
+    border: 1px groove gray;
+}
+
+#AI_userInput {
+    position: absolute;
+    width: 100%;
+    height: 30px;
+    bottom: 0;
+    background-color: #d8ebea;
+    border-top: 1px solid black;
+}
+.userResponse {
+    background-color: #32a6a8;
+    color: white;
+    border-radius: 20px;
+    position: relative;
+    left: 13%;
+    border: 1px solid black;
+    max-width: 75%;
+    padding-left: 4%;
+    padding-right: 4%;
+    margin-top: 5%;
+    overflow: auto;
+}
+.AIResponse {
+    background-color: #aeaeae;
+    color: black;
+    border-radius: 20px;
+    border: 1px solid black;
+    max-width: 75%;
+    position: relative;
+    left: 2%;
+    padding-left: 4%;
+    padding-right: 4%;
+    margin-top: 5%;
+    overflow: auto;
+}
+
+.AIInputClass {
+    position: relative;
+    left: 3px;
+    top: 5px;
+}
+#AI_textbox {
+    width: 150px;
+}
+#AI_text {
+    font-size: 15px;
+    overflow: auto;
+    width: 100%;
+    height: 90%;
+}
+
+#salesTable {
+    width: 400px;
+    border: 1px solid black;
+    border-collapse: collapse;
+    background-color: #eee
+}
+th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+td {
+    text-align: right;
+}
